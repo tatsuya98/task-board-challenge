@@ -1,0 +1,29 @@
+{
+  "name": "task-board-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "test": "jest ",
+    "start": "node listen.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "pg-format": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.6.1",
+    "@types/pg": "^8.15.5",
+    "dotenv": "^17.2.3",
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.4",
+    "typescript": "^5.9.3"
+  }
+}
