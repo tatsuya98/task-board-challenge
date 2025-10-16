@@ -1,0 +1,69 @@
+{
+  "GET /api": {
+    "description": "serves all available endpoints"
+  },
+  "POST/api/boards": {
+    "description": "creates entry in database and returns the new board id",
+    "example input": {
+      "board_name": "board",
+      "board_description(optional)": "test description"
+    },
+    "example output": {
+      "board_id": "1a2b3c4d-5e6f-7080-91a2-b3c4d5e6f7a8"
+    }
+  },
+  "GET /api/boards/:id": {
+    "description": "returns a board if it exists",
+    "example input": "1a2b3c4d-5e6f-7080-91a2-b3c4d5e6f7a8",
+    "example output": {
+      "board": {
+        "board_id": "1a2b3c4d-5e6f-7080-91a2-b3c4d5e6f7a8",
+        "board_name": "board",
+        "board_description": "test description or my board description if no description is provided "
+      },
+      "tasks": [
+        {
+          "task_id": "1a2b3c4d-5e6f-7080-91a2-b3c4d5e6f7a8",
+          "task_name": "test",
+          "task_description": "test",
+          "task_status": "Task to do | Task in progress | Task won't do | Task completed",
+          "task_icon_url": "test"
+        }
+      ]
+    }
+  },
+  "PUT /api/boards/:id": {
+    "description": "updates the boards name, description or both",
+    "example input": {
+      "board_name": "new name"
+    },
+    "output": "message"
+  },
+  "DELETE /api/boards/:id": {
+    "description": "deletes the board",
+    "example input": "id"
+  },
+  "POST/api/tasks/:id": {
+    "description": "creates entry in database",
+    "example input": {
+      "task_name": "test",
+      "task_description": "test",
+      "task_status": "Task to do | Task in progress | Task won't do | Task completed",
+      "task_icon_url": "test",
+      "board_id": "1a2b3c4d-5e6f-7080-91a2-b3c4d5e6f7a8"
+    }
+  },
+  "PUT /api/tasks:id": {
+    "description": "update task in database",
+    "example input": {
+      "task_name(optional)": "new name",
+      "task_description(optional)": "new description",
+      "task_status(optional)": "Task in progress",
+      "task_icon_url(optional": "yes.png"
+    }
+  },
+  "DELETE /api/tasks/:id": {
+    "description": "remove from database",
+    "example input": "board id"
+  }
+}

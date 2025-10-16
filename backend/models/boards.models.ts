@@ -1,4 +1,4 @@
-import type {BoardData} from "../types.ts";
+import type {BoardData} from "../../types.ts";
 import pool from "../database/connection.ts";
 import {CustomError} from "../errorHandling/ErrorHandler.ts";
 

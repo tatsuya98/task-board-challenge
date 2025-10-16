@@ -1,5 +1,5 @@
 import pool from "./connection";
-import type {BoardData, TaskData} from "../types";
+import type {BoardData, TaskData} from "../../types";
 
 import format from "pg-format";
 const seed = (boardData: BoardData[], taskData: TaskData[]) => {

@@ -1,4 +1,4 @@
-import {BoardData} from "../types";
+import {BoardData} from "../../types";
 
 const boardsData: BoardData[] = [
     {

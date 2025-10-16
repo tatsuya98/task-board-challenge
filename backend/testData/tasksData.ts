@@ -1,4 +1,4 @@
-import {TaskData} from "../types";
+import {TaskData} from "../../types";
 
 const taskData:TaskData[] = [
     {
