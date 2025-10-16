@@ -1,10 +1,11 @@
-import { Request, Response, NextFunction } from 'express';
+import { type Request, type Response, type NextFunction } from 'express';
+import {CustomError} from "./ErrorHandler.ts";
 interface HttpError extends Error {
     statusCode?: number;
     data?: any;
 }
 
-export const errorHandler = (
+ const errorHandler = (
     err: HttpError,
     req: Request,
     res: Response,
@@ -24,3 +25,4 @@ export const errorHandler = (
         }
     });
 };
+export {errorHandler, CustomError}

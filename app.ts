@@ -1,12 +1,13 @@
 
-import {errorHandler} from "./errorHandling/errorHandling";
-const express = require('express')
-const app = express()
-const cors = require('cors')
-const apiRouter = require('./routes/apiRouter');
-app.use(express.json());
-app.use(cors());
 
+import {errorHandler} from "./errorHandling/errorHandling.ts";
+import express from 'express';
+const app = express()
+import cors from "cors"
+import apiRouter from "./routes/apiRouter.ts";
+app.use(express.json());
+
+app.use(cors());
 app.use("/api", apiRouter);
 app.use(errorHandler)
-module.exports = app
+export default app;

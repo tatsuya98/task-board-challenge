@@ -1,5 +1,5 @@
-const app = require("./app.ts");
-const {DB_PORT} = process.env;
-app.listen(DB_PORT, () => {
-    console.log(`Example app listening on port ${DB_PORT}`);
+import app from "./app.ts";
+const {NODE_PORT} = process.env;
+app.listen(NODE_PORT, () => {
+    console.log(`Example app listening on port ${NODE_PORT}`);
 })

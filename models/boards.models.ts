@@ -1,7 +1,6 @@
-import {BoardData} from "../types";
-import pool from "../database/connection";
-import {CustomError} from "../errorHandling/ErrorHandler";
-import {customError} from "../utils";
+import type {BoardData} from "../types.ts";
+import pool from "../database/connection.ts";
+import {CustomError} from "../errorHandling/ErrorHandler.ts";
 
 export class BoardModel {
 

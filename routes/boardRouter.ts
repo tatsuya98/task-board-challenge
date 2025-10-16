@@ -1,6 +1,5 @@
-import {BoardController} from "../controllers/boards.controllers";
-
-const express = require('express')
+import {BoardController} from "../controllers/boards.controllers.ts";
+import express from 'express';
 const boardRouter = express.Router()
 
 const boardController: BoardController = new BoardController()
@@ -8,4 +7,4 @@ const boardController: BoardController = new BoardController()
 boardRouter.route("/").post(boardController.postBoard);
 boardRouter.route("/:id").get(boardController.getBoardById).put(boardController.putBoard).delete(boardController.deleteBoardById);
 
-module.exports = boardRouter;
+export default boardRouter;
